@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "student_eval_dropout_disabled": true,
+    "teachers_frozen_unchanged": true,
+    "nonzero_student_gradient": true,
+    "student_changed": true,
+    "single_student_save_load_exact": true,
+    "fresh_scores_match": true,
+    "two_token_prefix_kept_without_fake_eos": true,
+    "pure_sampling_profile": true
+  },
+  "all_passed": true,
+  "loss": -0.07095493376255035,
+  "gradient_l1": 0.3228010553866625,
+  "domain_metrics": {
+    "analysis": {
+      "valid_tokens": 2,
+      "proxy": -0.1201123595237732,
+      "sampled_log_ratio_mean": 0.03955411911010742,
+      "fresh_score_max_difference": 0.0
+    },
+    "code": {
+      "valid_tokens": 2,
+      "proxy": -0.0572749599814415,
+      "sampled_log_ratio_mean": 0.021627426147460938,
+      "fresh_score_max_difference": 0.0
+    },
+    "anchor": {
+      "valid_tokens": 2,
+      "proxy": 0.0,
+      "sampled_log_ratio_mean": 0.0,
+      "fresh_score_max_difference": 0.0
+    }
+  },
+  "scope": "Mechanism checks on a randomly initialized PyTorch model with a 17-token vocabulary."
+}

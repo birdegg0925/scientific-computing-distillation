@@ -1,0 +1,35 @@
+{
+  "engine": "hf",
+  "non_model_reference": false,
+  "checkpoint_id": "81c5967b998e51600a4d48f3dc44a4480c765694c6732cb5d692aa2d8cfc0849",
+  "n": 3,
+  "by_stage": {
+    "analysis": {
+      "n": 1,
+      "auto_pass": 0,
+      "rate": 0.0
+    },
+    "code": {
+      "n": 1,
+      "auto_pass": 0,
+      "rate": 0.0
+    },
+    "anchor": {
+      "n": 1,
+      "auto_pass": 0,
+      "rate": 0.0
+    }
+  },
+  "primary_macro": 0.0,
+  "anchor_rate": 0.0,
+  "manual_reasoning_review": {
+    "required": 1,
+    "reviewed": 0,
+    "status": "not_performed"
+  },
+  "paired": null,
+  "source_data_sha256": "6ca41722f77b4da252ec9346a4ca0e554fe154efa77a715aae48f872d3850392",
+  "predictions_sha256": "b0eb0fa3c0fafb57bf1d8f29d1f47f74fa942e3e12c39f6ca82849e5a98eb096",
+  "scope": "Automatic checks of numerical values, conditions, issue labels and restricted program execution.",
+  "code_numeric_instances_per_candidate": 3
+}

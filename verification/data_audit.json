@@ -1,0 +1,220 @@
+{
+  "checks": {
+    "problem_groups_do_not_cross_split_or_pool": true,
+    "mathematical_semantics_do_not_cross_group_split_or_pool": true,
+    "independent_anchor_pairs_unique": true,
+    "heldout_layouts_only_in_test_template": true
+  },
+  "all_passed": true,
+  "primary_math_groups": 896,
+  "total_groups": 1088,
+  "anchor_groups": 192,
+  "manifest": {
+    "task_version": 2,
+    "seed": 17,
+    "groups_per_primary_family": 384,
+    "template_holdout_groups_per_family": 64,
+    "anchor_groups": 192,
+    "rows": 1984,
+    "split_counts": {
+      "train": 1152,
+      "val": 288,
+      "test": 288,
+      "test_template": 256
+    },
+    "pool_counts": {
+      "teacher_sft": 512,
+      "distill": 512,
+      "anchor": 128,
+      "evaluation": 832
+    },
+    "split_rule": "whole problem groups; first 2/3 train, next 1/6 validation, last 1/6 test; extra groups form test_template",
+    "pool_rule": "training primary groups alternate teacher_sft/distill by group parity; independent anchor instruction pool",
+    "group_isolation": true,
+    "data_kind": "synthetic",
+    "styles": {
+      "seen": {
+        "integral": {
+          "derivation": [
+            "antiderivative",
+            "termwise"
+          ],
+          "code": [
+            "slices",
+            "loop"
+          ]
+        },
+        "linear": {
+          "derivation": [
+            "cramer",
+            "adjugate"
+          ],
+          "code": [
+            "rank_guard",
+            "det_guard"
+          ]
+        }
+      },
+      "heldout_in_test_template_only": {
+        "integral": {
+          "derivation": [
+            "limits_table"
+          ],
+          "code": [
+            "weight_vector"
+          ]
+        },
+        "linear": {
+          "derivation": [
+            "substitution"
+          ],
+          "code": [
+            "default_none"
+          ]
+        }
+      }
+    },
+    "claim_scope": "Two algorithm families: quadrature and linear systems. Train, validation and test use distinct problems with shared layouts. The template test uses layouts held out from training.",
+    "semantic_duplicate_audit": {
+      "duplicate_proposals_rejected": 5,
+      "behaviour_resamples": 4
+    },
+    "unique_primary_math_problems": 896,
+    "issue_by_split_and_stage": {
+      "train": {
+        "analysis": {
+          "antiderivative": 58,
+          "arithmetic": 76,
+          "integration_sign": 57,
+          "ok": 203,
+          "rhs_scale": 86,
+          "singular_system": 32
+        },
+        "code": {
+          "integration_sign": 86,
+          "ok": 181,
+          "rhs_scale": 64,
+          "simpson_weights": 85,
+          "singular_system": 96
+        }
+      },
+      "val": {
+        "analysis": {
+          "antiderivative": 15,
+          "arithmetic": 19,
+          "integration_sign": 14,
+          "ok": 50,
+          "rhs_scale": 22,
+          "singular_system": 8
+        },
+        "code": {
+          "integration_sign": 22,
+          "ok": 45,
+          "rhs_scale": 16,
+          "simpson_weights": 21,
+          "singular_system": 24
+        }
+      },
+      "test": {
+        "analysis": {
+          "antiderivative": 14,
+          "arithmetic": 19,
+          "integration_sign": 14,
+          "ok": 51,
+          "rhs_scale": 22,
+          "singular_system": 8
+        },
+        "code": {
+          "integration_sign": 21,
+          "ok": 46,
+          "rhs_scale": 16,
+          "simpson_weights": 21,
+          "singular_system": 24
+        }
+      },
+      "test_template": {
+        "analysis": {
+          "antiderivative": 14,
+          "arithmetic": 20,
+          "integration_sign": 14,
+          "ok": 51,
+          "rhs_scale": 21,
+          "singular_system": 8
+        },
+        "code": {
+          "integration_sign": 21,
+          "ok": 46,
+          "rhs_scale": 16,
+          "simpson_weights": 21,
+          "singular_system": 24
+        }
+      }
+    },
+    "issue_by_training_pool": {
+      "teacher_sft": {
+        "analysis": {
+          "antiderivative": 29,
+          "arithmetic": 38,
+          "integration_sign": 29,
+          "ok": 101,
+          "rhs_scale": 43,
+          "singular_system": 16
+        },
+        "code": {
+          "integration_sign": 43,
+          "ok": 91,
+          "rhs_scale": 32,
+          "simpson_weights": 42,
+          "singular_system": 48
+        }
+      },
+      "distill": {
+        "analysis": {
+          "antiderivative": 29,
+          "arithmetic": 38,
+          "integration_sign": 28,
+          "ok": 102,
+          "rhs_scale": 43,
+          "singular_system": 16
+        },
+        "code": {
+          "integration_sign": 43,
+          "ok": 90,
+          "rhs_scale": 32,
+          "simpson_weights": 43,
+          "singular_system": 48
+        }
+      }
+    },
+    "derivation_by_code_issue_groups": {
+      "antiderivative | integration_sign": 32,
+      "antiderivative | ok": 31,
+      "antiderivative | simpson_weights": 38,
+      "arithmetic | integration_sign": 28,
+      "arithmetic | ok": 50,
+      "arithmetic | rhs_scale": 5,
+      "arithmetic | simpson_weights": 34,
+      "arithmetic | singular_system": 17,
+      "integration_sign | integration_sign": 41,
+      "integration_sign | ok": 29,
+      "integration_sign | simpson_weights": 29,
+      "ok | integration_sign": 49,
+      "ok | ok": 129,
+      "ok | rhs_scale": 63,
+      "ok | simpson_weights": 47,
+      "ok | singular_system": 67,
+      "rhs_scale | ok": 50,
+      "rhs_scale | rhs_scale": 44,
+      "rhs_scale | singular_system": 57,
+      "singular_system | ok": 29,
+      "singular_system | singular_system": 27
+    },
+    "fingerprint": "9e309ff1854730756f239b7f6f939fcf14ea8b49e74cc0fa188db60d7341feb1"
+  },
+  "split_file_hashes": {
+    "train": "9050bad5f24e91d88e6714bdfbaa2163a432ddffd8bb8c0ad63f6b80af8cc846",
+    "val": "b25d5804c63f8d82a5e9ba06db45e77cbe2678bcac98c042e3409206dd74a458",
+    "test": "b26b4974b453295b3698302b991e375022718d03836cfb8b3c57eb67a45761d6",
+    "test_template": "335e1c0090f0aae4bf1a78a8dea87e447762756ddd97b00c6d46ed1438d255ee"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "scope": "Local CPU pipeline check with a randomly initialized miniature Transformers model and PEFT adapters.",
+  "phases": [
+    {
+      "phase": 1,
+      "command": [
+        "python",
+        "-m",
+        "sci_mopd.cli",
+        "sft",
+        "--data",
+        "data_pilot/train.jsonl",
+        "--out",
+        "verification/teacher_math",
+        "--model",
+        "verification/random_hf_model",
+        "--stage",
+        "analysis",
+        "--pool",
+        "teacher_sft",
+        "--steps",
+        "1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": 2,
+      "command": [
+        "python",
+        "-m",
+        "sci_mopd.cli",
+        "sft",
+        "--data",
+        "data_pilot/train.jsonl",
+        "--out",
+        "verification/teacher_code",
+        "--model",
+        "verification/random_hf_model",
+        "--stage",
+        "code",
+        "--pool",
+        "teacher_sft",
+        "--steps",
+        "1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": 3,
+      "command": [
+        "python",
+        "-m",
+        "sci_mopd.cli",
+        "train",
+        "--data",
+        "data_pilot/train.jsonl",
+        "--teacher-math",
+        "verification/teacher_math",
+        "--teacher-code",
+        "verification/teacher_code",
+        "--out",
+        "verification/student",
+        "--model",
+        "verification/random_hf_model",
+        "--steps",
+        "1",
+        "--max-new-tokens",
+        "4"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": 4,
+      "command": [
+        "python",
+        "-m",
+        "sci_mopd.cli",
+        "infer",
+        "--data",
+        "verification/hf_fixture_inputs.jsonl",
+        "--out",
+        "verification/hf_fixture_predictions.jsonl",
+        "--engine",
+        "hf",
+        "--model",
+        "verification/random_hf_model",
+        "--adapter",
+        "verification/student",
+        "--max-new-tokens",
+        "4"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": 5,
+      "command": [
+        "python",
+        "-m",
+        "sci_mopd.cli",
+        "evaluate",
+        "--data",
+        "verification/hf_fixture_inputs.jsonl",
+        "--predictions",
+        "verification/hf_fixture_predictions.jsonl",
+        "--out",
+        "verification/hf_fixture_evaluation"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "all_exit_zero": true
+}

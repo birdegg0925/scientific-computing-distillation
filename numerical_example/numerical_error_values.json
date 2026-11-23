@@ -1,0 +1,79 @@
+{
+  "provenance": "Deterministic constructed numerical example used to illustrate residual and solution error",
+  "candidate": [
+    2.0,
+    0.0
+  ],
+  "constructed_solution": [
+    1.0,
+    1.0
+  ],
+  "rows": [
+    {
+      "epsilon": 0.01,
+      "relative_residual": 0.0035267061471089545,
+      "relative_solution_error": 1.0,
+      "condition_2": 402.00751248429464
+    },
+    {
+      "epsilon": 0.001,
+      "relative_residual": 0.0003534650132968899,
+      "relative_solution_error": 1.0,
+      "condition_2": 4002.000750125414
+    },
+    {
+      "epsilon": 0.0001,
+      "relative_residual": 3.5354455186817316e-05,
+      "relative_solution_error": 1.0,
+      "condition_2": 40002.000074915224
+    },
+    {
+      "epsilon": 1e-05,
+      "relative_residual": 3.5355250671321836e-06,
+      "relative_solution_error": 1.0,
+      "condition_2": 400002.00000320596
+    },
+    {
+      "epsilon": 1e-06,
+      "relative_residual": 3.535533022543561e-07,
+      "relative_solution_error": 1.0,
+      "condition_2": 4000002.0005977233
+    },
+    {
+      "epsilon": 1e-07,
+      "relative_residual": 3.535533827459135e-08,
+      "relative_solution_error": 1.0,
+      "condition_2": 40000001.90919617
+    },
+    {
+      "epsilon": 1e-08,
+      "relative_residual": 3.5355338756067983e-09,
+      "relative_solution_error": 1.0,
+      "condition_2": 400000006.23500454
+    },
+    {
+      "epsilon": 1e-09,
+      "relative_residual": 3.535534197580241e-10,
+      "relative_solution_error": 1.0,
+      "condition_2": 3999999887.515756
+    },
+    {
+      "epsilon": 1e-10,
+      "relative_residual": 3.535534198375736e-11,
+      "relative_solution_error": 1.0,
+      "condition_2": 39999991794.0589
+    },
+    {
+      "epsilon": 1e-11,
+      "relative_residual": 3.535534198455286e-12,
+      "relative_solution_error": 1.0,
+      "condition_2": 399996089953.52924
+    },
+    {
+      "epsilon": 1e-12,
+      "relative_residual": 3.535848216954977e-13,
+      "relative_solution_error": 1.0,
+      "condition_2": 3999491959654.264
+    }
+  ]
+}

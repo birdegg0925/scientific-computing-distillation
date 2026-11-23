@@ -1,0 +1,138 @@
+{
+  "max_keyword_macro": 0.4,
+  "gate_passed": true,
+  "files": {
+    "data/val.jsonl": [
+      {
+        "baseline": "accept_all",
+        "macro": 0.33984375,
+        "by_stage": {
+          "analysis": "42/128",
+          "code": "45/128"
+        },
+        "by_stage_and_issue": {
+          "analysis | antiderivative": "0/15",
+          "analysis | arithmetic": "0/19",
+          "analysis | integration_sign": "0/14",
+          "analysis | ok": "42/50",
+          "analysis | rhs_scale": "0/22",
+          "analysis | singular_system": "0/8",
+          "code | integration_sign": "0/22",
+          "code | ok": "45/45",
+          "code | rhs_scale": "0/16",
+          "code | simpson_weights": "0/21",
+          "code | singular_system": "0/24"
+        }
+      },
+      {
+        "baseline": "keyword",
+        "macro": 0.34765625,
+        "by_stage": {
+          "analysis": "42/128",
+          "code": "47/128"
+        },
+        "by_stage_and_issue": {
+          "analysis | antiderivative": "0/15",
+          "analysis | arithmetic": "0/19",
+          "analysis | integration_sign": "0/14",
+          "analysis | ok": "42/50",
+          "analysis | rhs_scale": "0/22",
+          "analysis | singular_system": "0/8",
+          "code | integration_sign": "9/22",
+          "code | ok": "19/45",
+          "code | rhs_scale": "13/16",
+          "code | simpson_weights": "5/21",
+          "code | singular_system": "1/24"
+        }
+      }
+    ],
+    "data/test.jsonl": [
+      {
+        "baseline": "accept_all",
+        "macro": 0.34765625,
+        "by_stage": {
+          "analysis": "43/128",
+          "code": "46/128"
+        },
+        "by_stage_and_issue": {
+          "analysis | antiderivative": "0/14",
+          "analysis | arithmetic": "0/19",
+          "analysis | integration_sign": "0/14",
+          "analysis | ok": "43/51",
+          "analysis | rhs_scale": "0/22",
+          "analysis | singular_system": "0/8",
+          "code | integration_sign": "0/21",
+          "code | ok": "46/46",
+          "code | rhs_scale": "0/16",
+          "code | simpson_weights": "0/21",
+          "code | singular_system": "0/24"
+        }
+      },
+      {
+        "baseline": "keyword",
+        "macro": 0.390625,
+        "by_stage": {
+          "analysis": "44/128",
+          "code": "56/128"
+        },
+        "by_stage_and_issue": {
+          "analysis | antiderivative": "0/14",
+          "analysis | arithmetic": "0/19",
+          "analysis | integration_sign": "0/14",
+          "analysis | ok": "44/51",
+          "analysis | rhs_scale": "0/22",
+          "analysis | singular_system": "0/8",
+          "code | integration_sign": "9/21",
+          "code | ok": "28/46",
+          "code | rhs_scale": "14/16",
+          "code | simpson_weights": "2/21",
+          "code | singular_system": "3/24"
+        }
+      }
+    ],
+    "data/test_template.jsonl": [
+      {
+        "baseline": "accept_all",
+        "macro": 0.34765625,
+        "by_stage": {
+          "analysis": "43/128",
+          "code": "46/128"
+        },
+        "by_stage_and_issue": {
+          "analysis | antiderivative": "0/14",
+          "analysis | arithmetic": "0/20",
+          "analysis | integration_sign": "0/14",
+          "analysis | ok": "43/51",
+          "analysis | rhs_scale": "0/21",
+          "analysis | singular_system": "0/8",
+          "code | integration_sign": "0/21",
+          "code | ok": "46/46",
+          "code | rhs_scale": "0/16",
+          "code | simpson_weights": "0/21",
+          "code | singular_system": "0/24"
+        }
+      },
+      {
+        "baseline": "keyword",
+        "macro": 0.35546875,
+        "by_stage": {
+          "analysis": "43/128",
+          "code": "48/128"
+        },
+        "by_stage_and_issue": {
+          "analysis | antiderivative": "0/14",
+          "analysis | arithmetic": "0/20",
+          "analysis | integration_sign": "0/14",
+          "analysis | ok": "43/51",
+          "analysis | rhs_scale": "0/21",
+          "analysis | singular_system": "0/8",
+          "code | integration_sign": "13/21",
+          "code | ok": "21/46",
+          "code | rhs_scale": "14/16",
+          "code | simpson_weights": "0/21",
+          "code | singular_system": "0/24"
+        }
+      }
+    ]
+  }
+}
